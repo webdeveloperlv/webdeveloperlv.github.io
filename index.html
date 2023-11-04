@@ -197,8 +197,36 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <script
-                                            src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.15/howler.core.min.js"></script>
+                                        <script src="howler.core.min.js"></script>
+                                        <style>
+                                            .key>span i {
+                                                height: 85px;
+                                                font-weight: bold;
+                                            }
+
+                                            .white-key img {
+                                                position: absolute;
+                                                bottom: 0px;
+                                                left: 10px;
+                                                width: 30px;
+                                            }
+
+                                            .hide-notes img {
+                                                display: none;
+                                            }
+
+                                            .key .white-key {
+                                                height: 289px;
+                                            }
+
+                                            .piano {
+                                                height: 300px;
+                                            }
+
+                                            .key .black-key {
+                                                height: 170px;
+                                            }
+                                        </style>
                                         <script>
                                             // PIANO TRANSLATION PART
                                             var PIANO_TRANSLATION = {
@@ -213,28 +241,28 @@
                                                     reset: 'Очистить'
                                                 },
                                                 noteNames: {
-                                                    c: 'До',
-                                                    cis:
-                                                        '<span style="font-size:90%">До<span class="piano-accidental">♯</span></span>' +
-                                                        '<span style="font-size:90%">Ре<span class="piano-accidental">♭</span></span>',
-                                                    d: 'Ре',
-                                                    dis:
-                                                        '<span style="font-size:90%">Ре<span class="piano-accidental">♯</span></span>' +
-                                                        '<span style="font-size:90%">Ми<span class="piano-accidental">♭</span></span>',
-                                                    e: 'Ми',
-                                                    f: 'Фа',
-                                                    fis:
-                                                        '<span style="font-size:90%">Фа<span class="piano-accidental">♯</span></span>' +
-                                                        '<span style="font-size:80%">Соль<span class="piano-accidental">♭</span></span>',
-                                                    g: 'Соль',
-                                                    gis:
-                                                        '<span style="font-size:80%">Соль<span class="piano-accidental">♯</span></span>' +
-                                                        '<span style="font-size:90%">Ля<span class="piano-accidental">♭</span></span>',
-                                                    a: 'Ля',
-                                                    ais:
-                                                        '<span style="font-size:90%">Ля<span class="piano-accidental">♯</span></span>' +
-                                                        '<span style="font-size:90%">Си<span class="piano-accidental">♭</span></span>',
-                                                    b: 'Си',
+                                                    c: 'DO<img src="do.png" />',
+                                                    // cis:
+                                                    //     '<span style="font-size:90%">До<span class="piano-accidental">♯</span></span>' +
+                                                    //     '<span style="font-size:90%">Ре<span class="piano-accidental">♭</span></span>',
+                                                    d: 'RE<img src="re.png" />',
+                                                    // dis:
+                                                    //     '<span style="font-size:90%">Ре<span class="piano-accidental">♯</span></span>' +
+                                                    //     '<span style="font-size:90%">Ми<span class="piano-accidental">♭</span></span>',
+                                                    e: 'MI<img src="mi.png" />',
+                                                    f: 'FA<img src="fa.png" />',
+                                                    // fis:
+                                                    //     '<span style="font-size:90%">Фа<span class="piano-accidental">♯</span></span>' +
+                                                    //     '<span style="font-size:80%">Соль<span class="piano-accidental">♭</span></span>',
+                                                    g: 'SO<img src="so.png" />',
+                                                    // gis:
+                                                    //     '<span style="font-size:80%">Соль<span class="piano-accidental">♯</span></span>' +
+                                                    //     '<span style="font-size:90%">Ля<span class="piano-accidental">♭</span></span>',
+                                                    a: 'LA<img src="la.png" />',
+                                                    // ais:
+                                                    //     '<span style="font-size:90%">Ля<span class="piano-accidental">♯</span></span>' +
+                                                    //     '<span style="font-size:90%">Си<span class="piano-accidental">♭</span></span>',
+                                                    b: 'SI<img src="si.png" />',
                                                 },
                                                 keys: {
                                                     '1c': [90],
