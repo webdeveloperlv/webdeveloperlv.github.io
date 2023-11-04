@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+    <meta name="viewport" content="width=device-width,user-scalable=1,initial-scale=1.0,minimum-scale=1.0">
+    <meta property="og:title" content="Piano">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+    <meta charset="utf-8">
+    <META NAME="robots" CONTENT="noindex,nofollow">
+    <meta name="description" content="">
+    <title>Виртуальное пианино – Играть на пианино онлайн | Musicca</title>
+    <link href="joomla-alert.css?0.2.0" rel="stylesheet" data-asset-name="webcomponent.joomla-alert" />
+    <link href="style.css?v=1699098678" rel="stylesheet" />
+    <script src="jquery.js?3.6.0" data-asset-name="jquery"></script>
+    <script type="application/json" class="joomla-script-options new">{
+    "joomla.jtext": {
+        "ERROR": "\u041e\u0448\u0438\u0431\u043a\u0430",
+        "MESSAGE": "\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435",
+        "NOTICE": "\u0412\u043d\u0438\u043c\u0430\u043d\u0438\u0435",
+        "WARNING": "\u041f\u0440\u0435\u0434\u0443\u043f\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435",
+        "JCLOSE": "\u0417\u0430\u043a\u0440\u044b\u0442\u044c",
+        "JOK": "\u041e\u043a",
+        "JOPEN": "\u041e\u0442\u043a\u0440\u044b\u0442\u044c"
+    },
+    "mod_ads": {
+        "url": "https:\/\/cdn.fuseplatform.net\/publift\/tags\/2\/2548\/fuse.js"
+    },
+    "system.paths": {
+        "root": "",
+        "rootFull": "https:\/\/www.musicca.com\/",
+        "base": "",
+        "baseFull": "https:\/\/www.musicca.com\/"
+    },
+    "csrf.token": "284bb952c71a514da2866a60dd9e05eb"
+}</script>
+    <script src="merged_joomla_script.min.js" data-asset-name="core"></script>
+    <script src="width_test.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="screen.css">
+    <link rel="icon" type="image/png" href="/templates/musicca/images/favicon.png">
+    <script defer src="app.js"></script>
+    <script>
+        Joomla.JText.load({
+            message_sent: 'Сообщение отправлено',
+            error: 'Ошибка',
+            danger: 'Ошибка',
+            info: ' ',	//Used to hide Messages label after deleting of User account
+            success: 'Сообщение'
+        });
+
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X7KN29SRW8"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-X7KN29SRW8');</script>
+</head>
+
+<body class=" ru-RU">
+
+    <div class="fix__content">
+        <div class="wrapper">
+            <div class="content">
+                <div class="container">
+                    <div class="row flex__row">
+
+                        <div class="content__right col-12-m col-">
+                            <div id="system-message-container" aria-live="polite"></div>
+                            <article class="default__content item-page " itemscope
+                                itemtype="https://schema.org/Article">
+                                <meta itemprop="inLanguage" content="ru-RU">
+
+                                <div itemprop="articleBody">
+                                    <div class="default__page__content">
+                                        <link rel="stylesheet" href="piano.min.css">
+                                        <div id="piano">
+                                            <div class="btn-group-piano">
+                                                <button class="mark"></button>
+                                                <button class="hideNotes"></button>
+                                                <button class="playAll hidden"></button>
+                                                <button class="clear btn-reset hidden"></button>
+                                            </div>
+                                            <div class="piano-wrapper">
+                                                <ul class="piano" style="font-size:90%">
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="90"
+                                                            data-note="1c"><i></i></span>
+                                                        <span class="black-key" data-key="83"
+                                                            data-note="1cis"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="88"
+                                                            data-note="1d"><i></i></span>
+                                                        <span class="black-key" data-key="68"
+                                                            data-note="1dis"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="67"
+                                                            data-note="1e"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="81"
+                                                            data-note="1f"><i></i></span>
+                                                        <span class="black-key" data-key="50"
+                                                            data-note="1fis"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="87"
+                                                            data-note="1g"><i></i></span>
+                                                        <span class="black-key" data-key="51"
+                                                            data-note="1gis"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="69"
+                                                            data-note="2a"><i></i></span>
+                                                        <span class="black-key" data-key="52"
+                                                            data-note="2ais"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="82"
+                                                            data-note="2b"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="84"
+                                                            data-note="2c"><i></i></span>
+                                                        <span class="black-key" data-key="54"
+                                                            data-note="2cis"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="89"
+                                                            data-note="2d"><i></i></span>
+                                                        <span class="black-key" data-key="55"
+                                                            data-note="2dis"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="85"
+                                                            data-note="2e"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="73"
+                                                            data-note="2f"><i></i></span>
+                                                        <span class="black-key" data-key="57"
+                                                            data-note="2fis"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="79"
+                                                            data-note="2g"><i></i></span>
+                                                        <span class="black-key" data-key="48"
+                                                            data-note="2gis"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="80"
+                                                            data-note="3a"><i></i></span>
+                                                        <span class="black-key" data-key="187" data-additional-key="189"
+                                                            data-note="3ais"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="219"
+                                                            data-note="3b"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="221"
+                                                            data-note="3c"><i></i></span>
+                                                        <span class="black-key" data-key="70"
+                                                            data-note="3cis"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="86"
+                                                            data-note="3d"><i></i></span>
+                                                        <span class="black-key" data-key="71"
+                                                            data-note="3dis"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="66"
+                                                            data-note="3e"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="78"
+                                                            data-note="3f"><i></i></span>
+                                                        <span class="black-key" data-key="74"
+                                                            data-note="3fis"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="77"
+                                                            data-note="3g"><i></i></span>
+                                                        <span class="black-key" data-key="75"
+                                                            data-note="3gis"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="188"
+                                                            data-note="4a"><i></i></span>
+                                                        <span class="black-key" data-key="76"
+                                                            data-note="4ais"><i></i></span>
+                                                    </li>
+                                                    <li class="key">
+                                                        <span class="white-key" data-key="190"
+                                                            data-note="4b"><i></i></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <script
+                                            src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.15/howler.core.min.js"></script>
+                                        <script>
+                                            // PIANO TRANSLATION PART
+                                            var PIANO_TRANSLATION = {
+                                                url: 'pianino?',
+                                                buttonNames: {
+                                                    markNotes: 'Отметить',
+                                                    showHideNotes: {
+                                                        show: 'Показать названия нот',
+                                                        hide: 'Скрыть названия нот'
+                                                    },
+                                                    playNotes: 'Играть',
+                                                    reset: 'Очистить'
+                                                },
+                                                noteNames: {
+                                                    c: 'До',
+                                                    cis:
+                                                        '<span style="font-size:90%">До<span class="piano-accidental">♯</span></span>' +
+                                                        '<span style="font-size:90%">Ре<span class="piano-accidental">♭</span></span>',
+                                                    d: 'Ре',
+                                                    dis:
+                                                        '<span style="font-size:90%">Ре<span class="piano-accidental">♯</span></span>' +
+                                                        '<span style="font-size:90%">Ми<span class="piano-accidental">♭</span></span>',
+                                                    e: 'Ми',
+                                                    f: 'Фа',
+                                                    fis:
+                                                        '<span style="font-size:90%">Фа<span class="piano-accidental">♯</span></span>' +
+                                                        '<span style="font-size:80%">Соль<span class="piano-accidental">♭</span></span>',
+                                                    g: 'Соль',
+                                                    gis:
+                                                        '<span style="font-size:80%">Соль<span class="piano-accidental">♯</span></span>' +
+                                                        '<span style="font-size:90%">Ля<span class="piano-accidental">♭</span></span>',
+                                                    a: 'Ля',
+                                                    ais:
+                                                        '<span style="font-size:90%">Ля<span class="piano-accidental">♯</span></span>' +
+                                                        '<span style="font-size:90%">Си<span class="piano-accidental">♭</span></span>',
+                                                    b: 'Си',
+                                                },
+                                                keys: {
+                                                    '1c': [90],
+                                                    '1cis': [83],
+                                                    '1d': [88],
+                                                    '1dis': [68],
+                                                    '1e': [67],
+                                                    '1f': [81],
+                                                    '1fis': [50],
+                                                    '1g': [87],
+                                                    '1gis': [51],
+                                                    '2a': [69],
+                                                    '2ais': [52],
+                                                    '2b': [82],
+                                                    '2c': [84],
+                                                    '2cis': [54],
+                                                    '2d': [89],
+                                                    '2dis': [55],
+                                                    '2e': [85],
+                                                    '2f': [73],
+                                                    '2fis': [57],
+                                                    '2g': [79],
+                                                    '2gis': [48],
+                                                    '3a': [80],
+                                                    '3ais': [187, 189],
+                                                    '3b': [219],
+                                                    '3c': [221],
+                                                    '3cis': [70],
+                                                    '3d': [86],
+                                                    '3dis': [71],
+                                                    '3e': [66],
+                                                    '3f': [78],
+                                                    '3fis': [74],
+                                                    '3g': [77],
+                                                    '3gis': [75],
+                                                    '4a': [188],
+                                                    '4ais': [76],
+                                                    '4b': [190]
+                                                }
+                                            }
+                                        </script>
+                                        <script src="piano.min.js"></script>
+
+                                    </div>
+                                </div>
+
+                            </article>
+                            <div class="after__content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
